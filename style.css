@@ -1,6 +1,7 @@
 :root {
     --color-white: #fbfaf8;
     --color-black: #151515;
+    --color-primary:  #d5966b ;
 
     --font-shoulders: "Big Shoulders Display", sans-serif;
 }
@@ -9,6 +10,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -166,7 +171,6 @@ header .typography h1 {
     color: var(--color-white);
     mix-blend-mode: difference;
     line-height: 0.9;
-    /* white-space: nowrap; */
 }
 
 @media (max-width: 980px) {
@@ -190,8 +194,14 @@ header .typography .btn {
     align-items: center;
     justify-self: flex-start;
     text-decoration: none;
-    background-color: #d5966b;
+    background-color:var(--color-primary);
     white-space: nowrap;
+    
+    transition: background .4s ease;
+}
+
+header .typography .btn:hover {
+  background: var(--color-black);
 }
 
 header .typography .btn span {
@@ -203,6 +213,11 @@ header .typography .btn span {
     color: var(--color-white);
     font-family: var(--font-shoulders);
     padding: 20px 40px;
+}
+
+header .typography .btn:hover span{
+  background-color:var(--color-primary);
+  color: var(--color-white);
 }
 
 header .typography .btn .icon {
@@ -297,10 +312,6 @@ header .typography .btn .icon {
     align-content: center;
 }
 
-.gallery .typography * {
-    max-width: calc(400px - 1vw);
-}
-
 .gallery .typography .bg-text {
     font-family: var(--font-shoulders);
     text-transform: uppercase;
@@ -312,6 +323,7 @@ header .typography .btn .icon {
 }
 
 .gallery p {
+    max-width: 400px
 }
 
 /* Footer */
@@ -354,4 +366,9 @@ footer .container .socials {
 
 footer .container .socials a {
     color: var(--color-white);
+    transition: color .5s ease;
+}
+
+footer .container .socials a:hover {
+    color: var(--color-primary);
 }
