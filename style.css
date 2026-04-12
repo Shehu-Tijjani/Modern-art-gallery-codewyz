@@ -195,7 +195,7 @@ header .typography .btn span {
   background-color: var(--color-black);
   color: var(--color-white);
   font-family: var(--font-shoulders);
-  padding: 20px 40px;
+  padding: 25px 40px;
 }
 
 header .typography .btn:hover span {
